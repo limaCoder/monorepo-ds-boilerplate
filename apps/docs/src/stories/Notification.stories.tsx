@@ -2,13 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Notification from './templates/NotificationStories';
 
 const meta: Meta<typeof Notification> = {
+  title: 'Components/Notification',
   component: Notification,
-  argTypes: {
-    type: {
-      control: { type: 'radio' },
-      options: ['button', 'submit', 'reset'],
-    },
-  },
+  argTypes: {},
 };
 
 export default meta;
@@ -22,6 +18,6 @@ type Story = StoryObj<typeof Notification>;
  */
 export const Primary: Story = {
   render: (props: any) => <Notification />,
-  name: 'Components/Notification',
+  name: 'Primary',
   args: {},
 };
