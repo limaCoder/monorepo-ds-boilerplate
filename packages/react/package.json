@@ -6,15 +6,19 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch",
+    "build": "tsup",
+    "dev": "tsup --watch",
     "lint": "eslint src/**/*.ts* --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^18.3.1"
+    "react": "^18.3.1",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss": "^3.4.15",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49"
   },
   "devDependencies": {
     "@monorepo-ds-boilerplate/eslint-config": "workspace:*",
@@ -22,10 +26,6 @@
     "@monorepo-ds-boilerplate/ts-config": "workspace:*",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
-    "tailwind-merge": "^2.5.5",
-    "tailwindcss": "^3.4.15",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2"
   }
