@@ -4,7 +4,7 @@ import { NotificationContent } from './NotificationContent';
 import { NotificationIcon } from './NotificationIcon';
 import { NotificationRoot } from './NotificationRoot';
 
-export const Notifications = {
+export const Notification = {
   Root: NotificationRoot,
   Actions: NotificationActions,
   Action: NotificationAction,
