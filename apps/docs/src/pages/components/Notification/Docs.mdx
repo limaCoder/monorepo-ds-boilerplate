@@ -1,0 +1,126 @@
+import {
+  Canvas,
+  Meta,
+  Controls,
+  Title,
+  Subtitle,
+  Description,
+} from "@storybook/blocks";
+
+import { CircleCheck } from 'lucide-react';
+import { colors } from '@monorepo-ds-boilerplate/tokens';
+
+import * as NotificationStories from "../../../stories/Notification.stories";
+
+import { DocPropTableTabs } from '../components/DocPropTableTabs';
+
+import { notificationComponents, notificationPropsTable } from '../../../stories/props-types/Notification';
+
+<style>
+  {`
+    .row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.05rem;
+    }
+    
+    .item-description {
+      margin-left: 0.50rem;
+    }
+
+    .item-description p {
+      font-size: 17px;
+    }
+`}
+</style>
+
+<Meta of={NotificationStories} />
+
+<Title />
+<Subtitle>
+  Componente de Notificação para Exibição de Mensagens ao Usuário
+</Subtitle>
+
+<Canvas of={NotificationStories.Default} />
+
+## Funcionalidades
+
+<div className="row">
+  <CircleCheck color={colors.green300} />
+  <strong className="item-description">
+    Permite exibir mensagens de notificação com ícones e ações personalizáveis.
+  </strong>
+</div>
+<div className="row">
+  <CircleCheck color={colors.green300} />
+  <strong className="item-description">
+    Suporta diferentes tipos de ícones através da propriedade `icon`.
+  </strong>
+</div>
+<div className="row">
+  <CircleCheck color={colors.green300} />
+  <strong className="item-description">
+    Aceita um texto de conteúdo através da propriedade `text`, que é exibido na notificação.
+  </strong>
+</div>
+<div className="row">
+  <CircleCheck color={colors.green300} />
+  <strong className="item-description">
+    Possui um conjunto de ações personalizáveis através do componente `Notification.Actions`.
+  </strong>
+</div>
+<div className="row">
+  <CircleCheck color={colors.green300} />
+  <strong className="item-description">
+    Permite a personalização do estilo das ações através de classes CSS.
+  </strong>
+</div>
+
+## Sumário
+
+- [Objetivo](#objetivo)
+- [Utilização](#utilização)
+- [Propriedades](#propriedades)
+
+## Objetivo
+
+O componente Notification é projetado para fornecer uma interface interativa que permite aos usuários receber mensagens e feedbacks em uma aplicação. Ele é altamente personalizável, permitindo que os desenvolvedores ajustem sua aparência e comportamento de acordo com as necessidades da interface do usuário.
+
+## Utilização
+
+Para utilizar o componente Notification, importe-o e utilize seus subcomponentes conforme necessário. Aqui está um exemplo de uso:
+
+```tsx
+import { Notification } from '@monorepo-ds-boilerplate/react';
+import { Check, Rocket, X } from 'lucide-react';
+
+export default function NotificationTemplate() {
+  return (
+    <Notification.Root>
+      <Notification.Icon icon={Rocket} />
+      <Notification.Content text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aliquid iusto, sit libero illum, dolor saepe commodi aperiam maiores quas pariatur ipsum? Sed quam provident iure, officia adipisci nostrum laborum." />
+      <Notification.Actions>
+        <Notification.Action
+          icon={X}
+          onClick={() => {
+            console.log('entrou');
+          }}
+        />
+        <Notification.Action
+          icon={Check}
+          className="bg-yellow-400 hover:bg-yellow-500 dark:bg-yellow-400 dark:hover:bg-yellow-500"
+        />
+      </Notification.Actions>
+    </Notification.Root>
+  );
+}
+```
+
+## Propriedades
+
+Aqui estão as propriedades do componente `Notification`:
+
+<DocPropTableTabs 
+  components={notificationComponents}
+  componentsPropsTable={notificationPropsTable}
+/>

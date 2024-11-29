@@ -1,7 +1,7 @@
 import { Notification } from '@monorepo-ds-boilerplate/react';
 import { Check, Rocket, X } from 'lucide-react';
 
-export default function NotificationStory() {
+export default function NotificationTemplate() {
   return (
     <Notification.Root>
       <Notification.Icon icon={Rocket} />
