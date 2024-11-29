@@ -1,6 +1,7 @@
 {
   "extends": "@monorepo-ds-boilerplate/ts-config/react.json",
   "include": [
-    "src"
-  ]
+    "src",
+    "scripts/generate-exports.ts"
+  ],
 }

@@ -1,9 +1,18 @@
 import { defineConfig } from 'tsup';
+import { components } from './src/components';
+
+const entries = [
+  'src/index.tsx',
+  ...Object.values(components).map(path => `src/${path}/index.tsx`),
+];
 
 export default defineConfig({
-  entry: ['src/index.tsx'],
+  entry: entries,
   format: ['esm', 'cjs'],
-  dts: true,
+  dts: {
+    resolve: true,
+    entry: entries,
+  },
   external: ['react'],
   clean: true,
   minify: true,

@@ -6,6 +6,7 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
+    "prebuild": "tsx scripts/generate-exports.ts",
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "eslint src/**/*.ts* --fix"
@@ -25,9 +26,33 @@
     "@monorepo-ds-boilerplate/eslint-config": "workspace:*",
     "@monorepo-ds-boilerplate/tokens": "workspace:*",
     "@monorepo-ds-boilerplate/ts-config": "workspace:*",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-typescript": "^12.1.1",
+    "@types/node": "^22.10.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "rollup": "^4.27.4",
+    "rollup-plugin-dts": "^6.1.1",
     "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.2"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./accordion": {
+      "types": "./dist/components/Accordion/index.d.ts",
+      "import": "./dist/components/Accordion/index.mjs",
+      "require": "./dist/components/Accordion/index.js"
+    },
+    "./notification": {
+      "types": "./dist/components/Notification/index.d.ts",
+      "import": "./dist/components/Notification/index.mjs",
+      "require": "./dist/components/Notification/index.js"
+    }
   }
 }
