@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Accordion } from '@monorepo-ds-boilerplate/react';
 
-export default function AccordionStory() {
+export default function AccordionTemplate() {
   const [openItem, setOpenItem] = useState<number | null>(null);
 
   const handleToggle = (index: number) => {

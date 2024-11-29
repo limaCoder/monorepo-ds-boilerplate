@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Accordion from './templates/AccordionStories';
+import Accordion from './templates/Accordion';
 
 const meta: Meta<typeof Accordion> = {
   title: 'Components/Accordion',
@@ -11,8 +11,8 @@ export default meta;
 
 type Story = StoryObj<typeof Accordion>;
 
-export const Primary: Story = {
+export const Default: Story = {
   render: (props: any) => <Accordion />,
-  name: 'Primary',
+  name: 'Default',
   args: {},
 };

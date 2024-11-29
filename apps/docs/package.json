@@ -38,6 +38,7 @@
     "@monorepo-ds-boilerplate/react": "workspace:*",
     "@monorepo-ds-boilerplate/tokens": "workspace:*",
     "@monorepo-ds-boilerplate/ts-config": "workspace:*",
+    "@radix-ui/react-tabs": "^1.1.1",
     "@storybook/addon-a11y": "^8.4.5",
     "autoprefixer": "^10.4.20",
     "clsx": "^2.1.1",
