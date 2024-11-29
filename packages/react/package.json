@@ -9,7 +9,8 @@
     "prebuild": "tsx scripts/generate-exports.ts",
     "build": "tsup",
     "dev": "tsup --watch",
-    "lint": "eslint src/**/*.ts* --fix"
+    "lint": "eslint src/**/*.ts* --fix",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "keywords": [],
   "author": "",
