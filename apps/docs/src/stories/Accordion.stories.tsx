@@ -12,7 +12,7 @@ export default meta;
 type Story = StoryObj<typeof Accordion>;
 
 export const Default: Story = {
-  render: (props: any) => <Accordion />,
+  render: () => <Accordion />,
   name: 'Default',
   args: {},
 };

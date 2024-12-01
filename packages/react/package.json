@@ -27,6 +27,7 @@
     "@monorepo-ds-boilerplate/eslint-config": "workspace:*",
     "@monorepo-ds-boilerplate/tokens": "workspace:*",
     "@monorepo-ds-boilerplate/ts-config": "workspace:*",
+    "eslint": "^8.24.0",
     "@rollup/plugin-commonjs": "^28.0.1",
     "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-typescript": "^12.1.1",

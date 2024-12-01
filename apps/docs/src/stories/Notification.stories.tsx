@@ -12,7 +12,7 @@ export default meta;
 type Story = StoryObj<typeof Notification>;
 
 export const Default: Story = {
-  render: (props: any) => <Notification />,
+  render: () => <Notification />,
   name: 'Default',
   args: {},
 };
