@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Accordion } from '@monorepo-ds-boilerplate/react';
+import { Accordion } from '@monorepo-ds-boilerplate/react/accordion';
 
 export default function AccordionTemplate() {
   const [openItem, setOpenItem] = useState<number | null>(null);

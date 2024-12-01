@@ -1,4 +1,4 @@
-import { Notification } from '@monorepo-ds-boilerplate/react';
+import { Notification } from '@monorepo-ds-boilerplate/react/notification';
 import { Check, Rocket, X } from 'lucide-react';
 
 export default function NotificationTemplate() {

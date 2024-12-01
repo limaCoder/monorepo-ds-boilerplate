@@ -1,3 +1,5 @@
+import '../../styles/index.css';
+
 import { NotificationAction } from './NotificationAction';
 import { NotificationActions } from './NotificationActions';
 import { NotificationContent } from './NotificationContent';

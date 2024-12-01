@@ -6,7 +6,8 @@
       "dom",
       "ES2017"
     ],
-    "module": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "target": "es6"
   }
 }

@@ -1,3 +1,5 @@
+import '../../styles/index.css';
+
 import { AccordionRoot } from './AccordionRoot';
 import { AccordionItem } from './AccordionItem';
 import { AccordionTrigger } from './AccordionTrigger';
