@@ -1,7 +1,11 @@
 module.exports = {
-  // Lint & Prettify TS and JS files
-  '*.{js,jsx,ts,tsx}': (filenames) => [
-    `prettier --write ${filenames.join(' ')}`,
-    `npm run lint --fix . ${filenames.join(' --file')}`
+  "apps/**/*.{js,ts,jsx,tsx}": [
+    "eslint --fix"
+  ],
+  "packages/react/**/*.{js,ts,jsx,tsx}": [
+    "eslint --fix"
+  ],
+  "*.json": [
+    "prettier --write"
   ]
 }
