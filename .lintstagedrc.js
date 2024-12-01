@@ -2,7 +2,7 @@ module.exports = {
   "apps/**/*.{js,ts,jsx,tsx}": [
     "eslint --fix"
   ],
-  "packages/react/**/*.{js,ts,jsx,tsx}": [
+  "packages/!(eslint-config|ts-config)/**/*.{js,ts,jsx,tsx}": [
     "eslint --fix"
   ],
   "*.json": [
