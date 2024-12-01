@@ -2,6 +2,6 @@ npx --no-install lint-staged &&
 
 echo "\033[1;33mInit types checks into packages...\033[0m" &&
 
-pnpm --filter "packages/*" exec tsc --noEmit --skipLibCheck --filter "apps/*" exec tsc --noEmit --skipLibCheck --filter "!packages/eslint-config" --filter "!packages/ts-config" &&
+pnpm --filter "packages/*" --filter "apps/*" --filter "!packages/eslint-config" --filter "!packages/ts-config" exec tsc --noEmit --skipLibCheck &&
 
 echo "\033[1;33mchecagem de tipos finalizada!\033[0m"
