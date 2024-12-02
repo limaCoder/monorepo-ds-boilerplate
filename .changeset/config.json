@@ -7,9 +7,5 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": [
-    "@monorepo-ds-boilerplate/docs",
-    "@monorepo-ds-boilerplate/eslint-config",
-    "@monorepo-ds-boilerplate/ts-config"
-  ]
+  "ignore": ["@monorepo-ds-boilerplate/docs"]
 }
