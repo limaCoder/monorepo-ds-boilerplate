@@ -1,8 +1,9 @@
 import { dirname, join } from "path";
-module.exports = {
-  "stories": ["../src/pages/**/*.mdx", "../src/stories/**/*.stories.tsx"],
 
-  "addons": [
+module.exports = {
+  stories: ["../src/pages/**/*.mdx", "../src/stories/**/*.stories.tsx"],
+
+  addons: [
     getAbsolutePath("@storybook/addon-links"),
     getAbsolutePath("@storybook/addon-essentials"),
     getAbsolutePath("@storybook/addon-interactions"),
@@ -12,28 +13,42 @@ module.exports = {
     getAbsolutePath("@storybook/addon-themes")
   ],
 
-  "framework": {
+  framework: {
     name: getAbsolutePath("@storybook/react-vite"),
     options: {}
   },
 
-  "features": {
+  features: {
+    storyStoreV7: true
   },
 
-  viteFinal: (config, { configType }) => {
-    if (configType === 'PRODUCTION') {
-      config.base = '/monorepo-ds-boilerplate/'
-    }
-
-    return config
+  async viteFinal(config) {
+    return {
+      ...config,
+      base: './',
+      build: {
+        ...config.build,
+        outDir: 'storybook-static',
+        assetsDir: 'assets',
+        rollupOptions: {
+          ...config.build?.rollupOptions,
+          output: {
+            ...config.build?.rollupOptions?.output,
+            manualChunks: undefined
+          }
+        }
+      }
+    };
   },
 
-  docs: {},
+  docs: {
+    autodocs: true
+  },
 
   typescript: {
     reactDocgen: "react-docgen-typescript"
   }
-}
+};
 
 function getAbsolutePath(value) {
   return dirname(require.resolve(join(value, "package.json")));
