@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "storybook dev -p 6006",
     "lint": "eslint src/**/*.ts* --fix",
-    "deploy-storybook": "storybook-to-ghpages",
     "build": "storybook build",
     "clean": "rm -rf .turbo && rm -rf node_modules"
   },
@@ -25,7 +24,6 @@
     "@storybook/addon-themes": "^8.4.5",
     "@storybook/react": "^8.4.5",
     "@storybook/react-vite": "^8.4.5",
-    "@storybook/storybook-deployer": "^2.8.12",
     "@storybook/test": "^8.4.5",
     "@storybook/theming": "^8.4.5",
     "@types/react": "^18.3.12",
