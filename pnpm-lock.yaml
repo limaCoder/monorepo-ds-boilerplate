@@ -254,9 +254,6 @@ importers:
 
   packages/tokens:
     dependencies:
-      '@monorepo-ds-boilerplate/ts-config':
-        specifier: workspace:*
-        version: link:../ts-config
       tsup:
         specifier: ^8.3.5
         version: 8.3.5(jiti@1.21.6)(postcss@8.4.49)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1)
@@ -264,6 +261,9 @@ importers:
         specifier: ^5.7.2
         version: 5.7.2
     devDependencies:
+      '@monorepo-ds-boilerplate/ts-config':
+        specifier: workspace:*
+        version: link:../ts-config
       eslint:
         specifier: ^8.24.0
         version: 8.57.1
