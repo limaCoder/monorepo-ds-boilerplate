@@ -56,5 +56,9 @@
       "import": "./dist/components/Notification/index.mjs",
       "require": "./dist/components/Notification/index.js"
     }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
