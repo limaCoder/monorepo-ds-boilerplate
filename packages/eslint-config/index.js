@@ -16,7 +16,6 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended",
     "plugin:storybook/recommended",
-    "plugin:mdx/recommended",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -34,7 +33,7 @@ module.exports = {
   globals: {
     JSX: true,
   },
-  ignorePatterns: ["node_modules/", "dist/", ".eslintrc.js", "**/*.css", "*.config.js"],
+  ignorePatterns: ["node_modules/", "dist/", ".eslintrc.js", "**/*.css", "*.config.js", "*.mdx"],
   rules: {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",

@@ -7,6 +7,7 @@ export const DocPropTableTabs = ({ components, componentsPropsTable }: IDocPropT
       <TabsList>
         {components?.map(component => (
           <TabsTrigger
+            key={component?.value}
             className="text-white data-[state=active]:bg-gray-600"
             value={component?.value}
           >
@@ -15,7 +16,9 @@ export const DocPropTableTabs = ({ components, componentsPropsTable }: IDocPropT
         ))}
       </TabsList>
       {componentsPropsTable?.map(element => (
-        <TabsContent value={element?.componentName}>{element?.component}</TabsContent>
+        <TabsContent key={element?.componentName} value={element?.componentName}>
+          {element?.component}
+        </TabsContent>
       ))}
     </Tabs>
   );
