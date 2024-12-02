@@ -112,6 +112,9 @@ importers:
       '@storybook/theming':
         specifier: ^8.4.5
         version: 8.4.5(storybook@8.4.5(prettier@3.4.1))
+      '@types/node':
+        specifier: ^22.10.1
+        version: 22.10.1
       '@types/react':
         specifier: ^18.3.12
         version: 18.3.12
@@ -127,6 +130,9 @@ importers:
       storybook:
         specifier: ^8.4.5
         version: 8.4.5(prettier@3.4.1)
+      typescript:
+        specifier: ^5.7.2
+        version: 5.7.2
       vite:
         specifier: ^5.1.4
         version: 5.4.11(@types/node@22.10.1)(terser@5.36.0)
