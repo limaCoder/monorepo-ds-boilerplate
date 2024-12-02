@@ -9,18 +9,16 @@
       "cache": false
     },
     "build": {
-      "outputs": [
-        "dist/**",
-        "storybook-static/**"
-      ],
-      "dependsOn": [
-        "^build"
-      ]
+      "outputs": ["dist/**", "storybook-static/**"],
+      "dependsOn": ["^build"]
     },
     "lint": {
-      "dependsOn": [
-        "^lint"
-      ]
+      "dependsOn": ["^lint"]
+    },
+    "release": {
+      "dependsOn": ["build"],
+      "outputs": ["dist/**"],
+      "cache": false
     }
   }
 }
