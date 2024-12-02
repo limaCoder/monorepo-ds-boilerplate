@@ -12,15 +12,15 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mario Augusto de Lima",
   "license": "MIT",
   "dependencies": {
-    "@monorepo-ds-boilerplate/ts-config": "workspace:*",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2"
   },
   "devDependencies": {
-    "eslint": "^8.24.0"
+    "eslint": "^8.24.0",
+    "@monorepo-ds-boilerplate/ts-config": "workspace:*"
   },
   "publishConfig": {
     "access": "public",

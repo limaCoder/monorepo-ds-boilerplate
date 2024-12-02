@@ -13,7 +13,7 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mario Augusto de Lima",
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^10.4.20",
