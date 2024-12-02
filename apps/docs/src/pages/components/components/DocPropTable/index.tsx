@@ -21,7 +21,7 @@ export const DocPropTable = ({ props }: IDocPropTableProps) => {
       </TableHeader>
       <TableBody>
         {props?.map(prop => (
-          <TableRow>
+          <TableRow key={prop?.name}>
             <TableCell className="font-medium">{prop?.name}</TableCell>
             <TableCell>{prop?.type}</TableCell>
             <TableCell className="max-w-[350px]">{prop?.description}</TableCell>
