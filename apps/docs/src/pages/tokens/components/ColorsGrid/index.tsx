@@ -3,7 +3,7 @@ import { getContrast } from 'polished';
 import { cn } from '../../../../lib/tailwind';
 
 export function ColorsGrid() {
-  return Object.entries(colors).map(([key, color]) => {
+  return Object.entries(colors)?.map(([key, color]) => {
     const textColor = getContrast(color, '#FFF') < 3.5 ? 'text-black' : 'text-white';
 
     return (
