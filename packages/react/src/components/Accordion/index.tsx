@@ -1,14 +1,14 @@
 import '../../styles/index.css';
 
-import { AccordionRoot } from './AccordionRoot';
-import { AccordionItem } from './AccordionItem';
-import { AccordionTrigger } from './AccordionTrigger';
-import { AccordionContent } from './AccordionContent';
+import { AccordionRoot } from './components/AccordionRoot';
+import { AccordionItem } from './components/AccordionItem';
+import { AccordionTrigger } from './components/AccordionTrigger';
+import { AccordionContent } from './components/AccordionContent';
 
-import type { IAccordionRootProps } from './AccordionRoot/types';
-import type { IAccordionItemProps } from './AccordionItem/types';
-import type { IAccordionTriggerProps } from './AccordionTrigger/types';
-import type { IAccordionContentProps } from './AccordionContent/types';
+import type { IAccordionRootProps } from './components/AccordionRoot/types';
+import type { IAccordionItemProps } from './components/AccordionItem/types';
+import type { IAccordionTriggerProps } from './components/AccordionTrigger/types';
+import type { IAccordionContentProps } from './components/AccordionContent/types';
 
 export type {
   IAccordionRootProps,

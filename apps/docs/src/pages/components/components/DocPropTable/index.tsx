@@ -1,34 +1,28 @@
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '../../../../components/ui/table';
+import { Table } from '@monorepo-ds-boilerplate/react/table';
+
 import { IDocPropTableProps } from './types';
 
 export const DocPropTable = ({ props }: IDocPropTableProps) => {
   return (
-    <Table>
-      <TableHeader>
-        <TableRow>
-          <TableHead className="w-[100px]">Name</TableHead>
-          <TableHead>Type</TableHead>
-          <TableHead>Description</TableHead>
-          <TableHead className="text-right">Default</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
+    <Table.Root>
+      <Table.Header>
+        <Table.Row>
+          <Table.Head className="w-[100px]">Name</Table.Head>
+          <Table.Head>Type</Table.Head>
+          <Table.Head>Description</Table.Head>
+          <Table.Head className="text-right">Default</Table.Head>
+        </Table.Row>
+      </Table.Header>
+      <Table.Body>
         {props?.map(prop => (
-          <TableRow key={prop?.name}>
-            <TableCell className="font-medium">{prop?.name}</TableCell>
-            <TableCell>{prop?.type}</TableCell>
-            <TableCell className="max-w-[350px]">{prop?.description}</TableCell>
-            <TableCell className="text-right">{prop?.defaultValue}</TableCell>
-          </TableRow>
+          <Table.Row key={prop?.name}>
+            <Table.Cell className="font-medium">{prop?.name}</Table.Cell>
+            <Table.Cell>{prop?.type}</Table.Cell>
+            <Table.Cell className="max-w-[350px]">{prop?.description}</Table.Cell>
+            <Table.Cell className="text-right">{prop?.defaultValue}</Table.Cell>
+          </Table.Row>
         ))}
-      </TableBody>
-    </Table>
+      </Table.Body>
+    </Table.Root>
   );
 };

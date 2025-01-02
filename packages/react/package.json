@@ -55,6 +55,11 @@
       "types": "./dist/components/Notification/index.d.ts",
       "import": "./dist/components/Notification/index.mjs",
       "require": "./dist/components/Notification/index.js"
+    },
+    "./table": {
+      "types": "./dist/components/Table/index.d.ts",
+      "import": "./dist/components/Table/index.mjs",
+      "require": "./dist/components/Table/index.js"
     }
   },
   "publishConfig": {
