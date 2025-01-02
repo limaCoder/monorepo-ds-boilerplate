@@ -1,25 +1,21 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../../../components/ui/tabs';
+import { Tabs } from '@monorepo-ds-boilerplate/react/tabs';
 import { IDocPropTableTabsProps } from './types';
 
 export const DocPropTableTabs = ({ components, componentsPropsTable }: IDocPropTableTabsProps) => {
   return (
-    <Tabs defaultValue={components[0]?.value}>
-      <TabsList>
+    <Tabs.Root defaultValue={components[0]?.value}>
+      <Tabs.List>
         {components?.map(component => (
-          <TabsTrigger
-            key={component?.value}
-            className="text-white data-[state=active]:bg-gray-600"
-            value={component?.value}
-          >
+          <Tabs.Trigger key={component?.value} className="text-white" value={component?.value}>
             {component?.name}
-          </TabsTrigger>
+          </Tabs.Trigger>
         ))}
-      </TabsList>
+      </Tabs.List>
       {componentsPropsTable?.map(element => (
-        <TabsContent key={element?.componentName} value={element?.componentName}>
+        <Tabs.Content key={element?.componentName} value={element?.componentName}>
           {element?.component}
-        </TabsContent>
+        </Tabs.Content>
       ))}
-    </Tabs>
+    </Tabs.Root>
   );
 };
