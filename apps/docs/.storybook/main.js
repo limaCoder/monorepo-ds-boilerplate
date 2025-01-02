@@ -10,7 +10,9 @@ module.exports = {
     getAbsolutePath("@storybook/addon-a11y"),
     getAbsolutePath("@storybook/addon-mdx-gfm"),
     "@chromatic-com/storybook",
-    getAbsolutePath("@storybook/addon-themes")
+    getAbsolutePath("@storybook/addon-themes"),
+    getAbsolutePath("@storybook/addon-interactions"),
+    getAbsolutePath("@storybook/addon-coverage"),
   ],
 
   framework: {
@@ -46,7 +48,17 @@ module.exports = {
   },
 
   typescript: {
-    reactDocgen: "react-docgen-typescript"
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      compilerOptions: {
+        allowSyntheticDefaultImports: false,
+        esModuleInterop: false,
+      },
+      propFilter: {
+        skipPropsWithoutDoc: false,
+        skipChildrenPropWithoutDoc: false,
+      },
+    }
   }
 };
 
