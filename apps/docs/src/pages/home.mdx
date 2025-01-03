@@ -1,7 +1,40 @@
-import { Meta } from '@storybook/blocks'
+import { Meta } from '@storybook/blocks';
+import bannerImage from '../assets/banner-placeholder.png'
+import QuickLinkCard from './components/components/QuickLinkCard'
+
+import { colors } from '@monorepo-ds-boilerplate/tokens'
+
+import { CheckSquare2Icon } from 'lucide-react'
 
 <Meta title="Home" />
 
+<style>
+   {`
+    .quick-link-cards-container {
+      margin-top: 2rem;
+    }
+  `}
+</style>
+
 # Monorepo DS Boilerplate
 
-Boilerplate de Design System.
+<img src={bannerImage} alt="Banner Placeholder" />
+
+O sistema de design para construir interfaces modernas e consistentes.
+
+Os componentes, estilos e utilitários do Monorepo DS Boilerplate são o núcleo do design system compartilhado em todas as aplicações.
+
+Este storybook representa os componentes encontrados no repositório `@monorepo-ds-boilerplate/react`.
+
+Sua organização está alinhada com os princípios de Design Systems modernos, utilizando:
+
+- Compound Components
+- Tokens de Design
+- Componentes Reutilizáveis
+- Documentação Detalhada
+
+## Guias rápidos
+
+<div className="quick-link-cards-container">
+  <QuickLinkCard icon={CheckSquare2Icon} iconColor={colors.green300} title="Como validar entregas?" description="Passo a passo para validar entregas dentro do Design System, seja de novas funcionalidades ou de alterações." href="/?path=/docs/guias-como-validar-novas-implementações" linkText="Ver guia" />
+</div>
