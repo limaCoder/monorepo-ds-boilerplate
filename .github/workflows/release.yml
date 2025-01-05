@@ -31,7 +31,9 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Install Playwright
-        run: npx playwright install --with-deps
+        run: |
+          npm install -g playwright
+          npx playwright install --with-deps
 
       - name: Build Storybook
         run: pnpm --filter @monorepo-ds-boilerplate/docs build
