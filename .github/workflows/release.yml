@@ -35,6 +35,9 @@ jobs:
           npm install -g playwright
           npx playwright install --with-deps
 
+      - name: Build Packages
+        run: pnpm build --filter "./packages/*"
+
       - name: Build Storybook
         run: pnpm --filter @monorepo-ds-boilerplate/docs build
 
