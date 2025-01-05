@@ -15,7 +15,7 @@ export default function NotificationTemplate() {
         />
         <Notification.Action
           icon={Check}
-          className="bg-yellow-400 hover:bg-yellow-500 dark:bg-yellow-400 dark:hover:bg-yellow-500"
+          className="bg-slate-700 hover:bg-slate-600 dark:bg-slate-400 dark:hover:bg-slate-500"
         />
       </Notification.Actions>
     </Notification.Root>
