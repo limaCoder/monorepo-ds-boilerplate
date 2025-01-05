@@ -8,8 +8,43 @@ on:
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9.14.2
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+
+      - name: Build Storybook
+        run: pnpm --filter @monorepo-ds-boilerplate/docs build
+
+      - name: Run Storybook tests
+        run: |
+          pnpm --filter @monorepo-ds-boilerplate/docs serve-storybook & 
+          sleep 10
+          pnpm --filter @monorepo-ds-boilerplate/docs test-storybook
+
   release:
     name: Release
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
