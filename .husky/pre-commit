@@ -4,4 +4,10 @@ echo "\033[1;33mInit types checks into packages...\033[0m" &&
 
 pnpm --filter @monorepo-ds-boilerplate/react --filter @monorepo-ds-boilerplate/tokens --filter @monorepo-ds-boilerplate/docs exec tsc --noEmit --skipLibCheck &&
 
-echo "\033[1;33mchecagem de tipos finalizada!\033[0m"
+echo "\033[1;33mchecagem de tipos finalizada!\033[0m" &&
+
+echo "\033[1;33mIniciando testes dos componentes no Storybook...\033[0m" &&
+
+pnpm --filter @monorepo-ds-boilerplate/docs test-storybook &&
+
+echo "\033[1;33mTestes dos componentes no Storybook finalizados com sucesso!\033[0m"
